@@ -1,0 +1,542 @@
+2025-09-14 13:26:29,087 - __main__ - ERROR - Failed to initialize Groq client: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-09-14 13:26:29,087 - __main__ - INFO - Using fallback evaluation system
+2025-09-14 13:26:29,087 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 13:26:29,087 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.1-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:26:29,088 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 13:26:29,088 - __main__ - INFO - Groq client available: False
+2025-09-14 13:26:29,126 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.34:5000
+2025-09-14 13:26:29,126 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-14 13:26:29,127 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 13:26:29,320 - __main__ - ERROR - Failed to initialize Groq client: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-09-14 13:26:29,320 - __main__ - INFO - Using fallback evaluation system
+2025-09-14 13:26:29,320 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 13:26:29,320 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.1-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:26:29,321 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 13:26:29,321 - __main__ - INFO - Groq client available: False
+2025-09-14 13:26:29,340 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 13:26:29,351 - werkzeug - INFO -  * Debugger PIN: 136-019-522
+2025-09-14 13:30:34,749 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 13:30:34] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-14 13:30:35,329 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 13:30:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-14 13:30:40,706 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 13:30:40] "[33mGET /docs HTTP/1.1[0m" 404 -
+2025-09-14 13:30:50,253 - werkzeug - INFO - 192.168.1.34 - - [14/Sep/2025 13:30:50] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-14 13:30:50,841 - werkzeug - INFO - 192.168.1.34 - - [14/Sep/2025 13:30:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-14 13:31:21,415 - werkzeug - INFO -  * Detected change in '/Users/rishabhbhardwaj/Desktop/Excel Mock Interviewer/app.py', reloading
+2025-09-14 13:31:21,500 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 13:31:21,777 - __main__ - ERROR - Failed to initialize Groq client with all methods: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-09-14 13:31:21,777 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 13:31:21,777 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.1-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:31:21,777 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 13:31:21,777 - __main__ - INFO - Groq client available: False
+2025-09-14 13:31:21,799 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 13:31:21,805 - werkzeug - INFO -  * Debugger PIN: 136-019-522
+2025-09-14 13:39:08,517 - __main__ - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:39:08,517 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 13:39:08,517 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:39:08,518 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 13:39:08,518 - __main__ - INFO - Groq client available: True
+2025-09-14 13:39:08,559 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.34:5000
+2025-09-14 13:39:08,559 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-14 13:39:08,559 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 13:39:08,756 - __main__ - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:39:08,756 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 13:39:08,756 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:39:08,756 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 13:39:08,756 - __main__ - INFO - Groq client available: True
+2025-09-14 13:39:08,784 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 13:39:08,793 - werkzeug - INFO -  * Debugger PIN: 136-019-522
+2025-09-14 13:39:25,265 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 13:39:25] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-14 13:39:30,198 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 13:39:30] "[33mGET /docs HTTP/1.1[0m" 404 -
+2025-09-14 13:50:48,997 - werkzeug - INFO -  * Detected change in '/Users/rishabhbhardwaj/Desktop/Excel Mock Interviewer/app.py', reloading
+2025-09-14 13:50:49,071 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 13:50:49,376 - __main__ - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:50:49,376 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 13:50:49,376 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:50:49,377 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 13:50:49,377 - __main__ - INFO - Groq client available: True
+2025-09-14 13:50:49,411 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 13:50:49,421 - werkzeug - INFO -  * Debugger PIN: 136-019-522
+2025-09-14 13:51:10,661 - werkzeug - INFO -  * Detected change in '/Users/rishabhbhardwaj/Desktop/Excel Mock Interviewer/app.py', reloading
+2025-09-14 13:51:10,724 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 13:51:11,018 - __main__ - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:51:11,019 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 13:51:11,019 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:51:11,019 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 13:51:11,019 - __main__ - INFO - Groq client available: True
+2025-09-14 13:51:11,048 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 13:51:11,054 - werkzeug - INFO -  * Debugger PIN: 136-019-522
+2025-09-14 13:51:56,600 - werkzeug - INFO -  * Detected change in '/Users/rishabhbhardwaj/Desktop/Excel Mock Interviewer/app.py', reloading
+2025-09-14 13:51:56,666 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 13:55:17,092 - app - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:55:17,092 - app - INFO - ExcelInterviewer initialized
+2025-09-14 13:55:17,092 - app - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:55:23,481 - app - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:55:23,481 - app - INFO - ExcelInterviewer initialized
+2025-09-14 13:55:23,481 - app - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:55:34,876 - app - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:55:34,876 - app - INFO - ExcelInterviewer initialized
+2025-09-14 13:55:34,876 - app - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:55:36,381 - app - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:55:36,381 - app - INFO - ExcelInterviewer initialized
+2025-09-14 13:55:36,381 - app - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:55:37,326 - app - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:55:37,326 - app - INFO - ExcelInterviewer initialized
+2025-09-14 13:55:37,326 - app - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:57:45,559 - app - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:57:45,559 - app - INFO - ExcelInterviewer initialized
+2025-09-14 13:57:45,559 - app - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:57:46,702 - app - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:57:46,703 - app - INFO - ExcelInterviewer initialized
+2025-09-14 13:57:46,703 - app - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:57:52,332 - app - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:57:52,332 - app - INFO - ExcelInterviewer initialized
+2025-09-14 13:57:52,332 - app - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:58:13,362 - app - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:58:13,362 - app - INFO - ExcelInterviewer initialized
+2025-09-14 13:58:13,362 - app - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:58:16,004 - app - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:58:16,004 - app - INFO - ExcelInterviewer initialized
+2025-09-14 13:58:16,004 - app - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 13:59:06,637 - app - INFO - Groq client initialized successfully with standard method
+2025-09-14 13:59:06,638 - app - INFO - ExcelInterviewer initialized
+2025-09-14 13:59:06,638 - app - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 14:07:55,971 - __main__ - INFO - Groq client initialized successfully with standard method
+2025-09-14 14:07:55,972 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 14:07:55,972 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 14:07:55,972 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 14:07:55,972 - __main__ - INFO - Groq client available: True
+2025-09-14 14:07:56,013 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.4:5000
+2025-09-14 14:07:56,013 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-14 14:07:56,014 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 14:07:56,194 - __main__ - INFO - Groq client initialized successfully with standard method
+2025-09-14 14:07:56,194 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 14:07:56,194 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 14:07:56,194 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 14:07:56,194 - __main__ - INFO - Groq client available: True
+2025-09-14 14:07:56,221 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 14:07:56,229 - werkzeug - INFO -  * Debugger PIN: 136-019-522
+2025-09-14 14:08:03,156 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:08:03] "GET / HTTP/1.1" 200 -
+2025-09-14 14:08:03,476 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:08:03] "GET /health HTTP/1.1" 200 -
+2025-09-14 14:08:15,225 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:08:15] "OPTIONS /start_interview HTTP/1.1" 200 -
+2025-09-14 14:12:10,490 - werkzeug - INFO - 172.20.10.4 - - [14/Sep/2025 14:12:10] "GET / HTTP/1.1" 200 -
+2025-09-14 14:12:10,877 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:12:10] "GET /health HTTP/1.1" 200 -
+2025-09-14 14:12:11,288 - werkzeug - INFO - 172.20.10.4 - - [14/Sep/2025 14:12:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-14 14:12:38,926 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:12:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-14 14:12:46,806 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:12:46] "GET / HTTP/1.1" 200 -
+2025-09-14 14:12:46,848 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:12:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-09-14 14:12:47,003 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:12:47] "GET /health HTTP/1.1" 200 -
+2025-09-14 14:15:13,988 - werkzeug - INFO -  * Detected change in '/Users/rishabhbhardwaj/Desktop/Excel Mock Interviewer/app.py', reloading
+2025-09-14 14:15:14,055 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 14:15:43,967 - __main__ - INFO - Groq client initialized successfully with standard method
+2025-09-14 14:15:43,967 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 14:15:43,968 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 14:15:43,968 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 14:15:43,968 - __main__ - INFO - Groq client available: True
+2025-09-14 14:15:44,006 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.4:5000
+2025-09-14 14:15:44,007 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-14 14:15:44,007 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 14:15:44,190 - __main__ - INFO - Groq client initialized successfully with standard method
+2025-09-14 14:15:44,190 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 14:15:44,190 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 14:15:44,190 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 14:15:44,190 - __main__ - INFO - Groq client available: True
+2025-09-14 14:15:44,216 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 14:15:44,223 - werkzeug - INFO -  * Debugger PIN: 136-019-522
+2025-09-14 14:15:52,904 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:15:52] "GET / HTTP/1.1" 200 -
+2025-09-14 14:15:53,154 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:15:53] "GET /health HTTP/1.1" 200 -
+2025-09-14 14:16:18,908 - __main__ - INFO - Created session e59c3555-6c22-4194-8b4e-71029a593e81
+2025-09-14 14:16:18,909 - __main__ - INFO - New interview session started: e59c3555-6c22-4194-8b4e-71029a593e81
+2025-09-14 14:16:18,909 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:16:18] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 14:16:36,626 - __main__ - INFO - Response submitted for session e59c3555-6c22-4194-8b4e-71029a593e81
+2025-09-14 14:16:36,627 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:16:36] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:16:50,378 - __main__ - INFO - Response submitted for session e59c3555-6c22-4194-8b4e-71029a593e81
+2025-09-14 14:16:50,379 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:16:50] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:17:05,962 - __main__ - INFO - Response submitted for session e59c3555-6c22-4194-8b4e-71029a593e81
+2025-09-14 14:17:10,554 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:17:10,570 - __main__ - INFO - Groq evaluation completed for session e59c3555-6c22-4194-8b4e-71029a593e81: score=12
+2025-09-14 14:17:10,571 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:17:10] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:17:21,381 - __main__ - INFO - Response submitted for session e59c3555-6c22-4194-8b4e-71029a593e81
+2025-09-14 14:17:22,148 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:17:22,150 - __main__ - INFO - Groq evaluation completed for session e59c3555-6c22-4194-8b4e-71029a593e81: score=2
+2025-09-14 14:17:22,150 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:17:22] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:17:26,412 - __main__ - INFO - Response submitted for session e59c3555-6c22-4194-8b4e-71029a593e81
+2025-09-14 14:17:27,022 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:17:27,023 - __main__ - INFO - Groq evaluation completed for session e59c3555-6c22-4194-8b4e-71029a593e81: score=0
+2025-09-14 14:17:27,023 - __main__ - INFO - Interview completed for session e59c3555-6c22-4194-8b4e-71029a593e81
+2025-09-14 14:17:27,024 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:17:27] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:23:27,664 - __main__ - INFO - Groq client initialized successfully with standard method
+2025-09-14 14:23:27,665 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 14:23:27,665 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 14:23:27,665 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 14:23:27,665 - __main__ - INFO - Groq client available: True
+2025-09-14 14:23:27,705 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.4:5000
+2025-09-14 14:23:27,705 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-14 14:23:27,706 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 14:23:27,893 - __main__ - INFO - Groq client initialized successfully with standard method
+2025-09-14 14:23:27,893 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 14:23:27,893 - __main__ - INFO - Configuration: {'max_questions': 5, 'session_timeout': 30, 'min_response_length': 5, 'groq_model': 'llama-3.3-70b-versatile', 'llm_temperature': 0.1, 'max_tokens': 1000, 'technical_weight': 40, 'methodology_weight': 30, 'clarity_weight': 20, 'best_practices_weight': 10, 'advanced_threshold': 80, 'intermediate_threshold': 60, 'basic_threshold': 40}
+2025-09-14 14:23:27,894 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 14:23:27,894 - __main__ - INFO - Groq client available: True
+2025-09-14 14:23:27,918 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 14:23:27,927 - werkzeug - INFO -  * Debugger PIN: 136-019-522
+2025-09-14 14:23:29,242 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:23:29] "GET / HTTP/1.1" 200 -
+2025-09-14 14:23:29,451 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:23:29] "GET /health HTTP/1.1" 200 -
+2025-09-14 14:28:08,126 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:28:08] "GET / HTTP/1.1" 200 -
+2025-09-14 14:28:08,527 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:28:08] "GET /health HTTP/1.1" 200 -
+2025-09-14 14:28:17,119 - __main__ - INFO - Created session ed7e315b-bbd3-415e-8cf7-18aef12e277e
+2025-09-14 14:28:17,121 - __main__ - INFO - New interview session started: ed7e315b-bbd3-415e-8cf7-18aef12e277e
+2025-09-14 14:28:17,121 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:28:17] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 14:28:38,719 - __main__ - INFO - Response submitted for session ed7e315b-bbd3-415e-8cf7-18aef12e277e
+2025-09-14 14:28:40,134 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:28:40,154 - __main__ - INFO - Groq evaluation completed for session ed7e315b-bbd3-415e-8cf7-18aef12e277e: score=0
+2025-09-14 14:28:40,155 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:28:40] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:28:54,385 - __main__ - INFO - Response submitted for session ed7e315b-bbd3-415e-8cf7-18aef12e277e
+2025-09-14 14:28:55,184 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:28:55,186 - __main__ - INFO - Groq evaluation completed for session ed7e315b-bbd3-415e-8cf7-18aef12e277e: score=0
+2025-09-14 14:28:55,187 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:28:55] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:28:57,501 - __main__ - INFO - Response submitted for session ed7e315b-bbd3-415e-8cf7-18aef12e277e
+2025-09-14 14:28:59,757 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:28:59,758 - __main__ - ERROR - Failed to parse Groq response as JSON for session ed7e315b-bbd3-415e-8cf7-18aef12e277e: Expecting value: line 1 column 2 (char 1)
+2025-09-14 14:28:59,759 - __main__ - INFO - Fallback evaluation completed for session ed7e315b-bbd3-415e-8cf7-18aef12e277e: score=1
+2025-09-14 14:28:59,759 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:28:59] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:29:03,435 - __main__ - INFO - Response submitted for session ed7e315b-bbd3-415e-8cf7-18aef12e277e
+2025-09-14 14:29:04,472 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:29:04,473 - __main__ - INFO - Groq evaluation completed for session ed7e315b-bbd3-415e-8cf7-18aef12e277e: score=0
+2025-09-14 14:29:04,473 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:29:04] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:29:18,752 - __main__ - INFO - Response submitted for session ed7e315b-bbd3-415e-8cf7-18aef12e277e
+2025-09-14 14:29:29,198 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:29:29,199 - __main__ - INFO - Groq evaluation completed for session ed7e315b-bbd3-415e-8cf7-18aef12e277e: score=0
+2025-09-14 14:29:29,200 - __main__ - INFO - Interview completed for session ed7e315b-bbd3-415e-8cf7-18aef12e277e
+2025-09-14 14:29:29,201 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:29:29] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:29:57,115 - __main__ - INFO - Created session 2f801f1b-d4aa-4e32-8329-9e26ff6b5586
+2025-09-14 14:29:57,116 - __main__ - INFO - New interview session started: 2f801f1b-d4aa-4e32-8329-9e26ff6b5586
+2025-09-14 14:29:57,117 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:29:57] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 14:30:18,549 - __main__ - INFO - Response submitted for session 2f801f1b-d4aa-4e32-8329-9e26ff6b5586
+2025-09-14 14:30:19,988 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:30:19,989 - __main__ - INFO - Groq evaluation completed for session 2f801f1b-d4aa-4e32-8329-9e26ff6b5586: score=2
+2025-09-14 14:30:19,990 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:30:19] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:30:48,397 - __main__ - INFO - Response submitted for session 2f801f1b-d4aa-4e32-8329-9e26ff6b5586
+2025-09-14 14:30:49,065 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:30:49,066 - __main__ - INFO - Groq evaluation completed for session 2f801f1b-d4aa-4e32-8329-9e26ff6b5586: score=0
+2025-09-14 14:30:49,067 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:30:49] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:34:54,743 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:34:54] "GET / HTTP/1.1" 200 -
+2025-09-14 14:34:54,959 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:34:54] "GET /health HTTP/1.1" 200 -
+2025-09-14 14:46:13,906 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:46:13] "GET / HTTP/1.1" 200 -
+2025-09-14 14:46:14,158 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:46:14] "GET /health HTTP/1.1" 200 -
+2025-09-14 14:46:44,193 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:46:44] "GET / HTTP/1.1" 200 -
+2025-09-14 14:46:44,238 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:46:44] "GET /health HTTP/1.1" 200 -
+2025-09-14 14:46:46,830 - __main__ - INFO - Created session ebd08c47-554c-4f87-b736-844979caf9b9
+2025-09-14 14:46:46,830 - __main__ - INFO - New interview session started: ebd08c47-554c-4f87-b736-844979caf9b9
+2025-09-14 14:46:46,830 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:46:46] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 14:46:50,315 - __main__ - INFO - Response submitted for session ebd08c47-554c-4f87-b736-844979caf9b9
+2025-09-14 14:46:50,320 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:46:50] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:46:59,067 - __main__ - INFO - Response submitted for session ebd08c47-554c-4f87-b736-844979caf9b9
+2025-09-14 14:46:59,069 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:46:59] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:47:05,481 - __main__ - INFO - Response submitted for session ebd08c47-554c-4f87-b736-844979caf9b9
+2025-09-14 14:47:05,482 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:47:05] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:47:16,232 - __main__ - INFO - Response submitted for session ebd08c47-554c-4f87-b736-844979caf9b9
+2025-09-14 14:47:16,234 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:47:16] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:47:22,364 - __main__ - INFO - Response submitted for session ebd08c47-554c-4f87-b736-844979caf9b9
+2025-09-14 14:47:22,367 - __main__ - INFO - Interview completed for session ebd08c47-554c-4f87-b736-844979caf9b9
+2025-09-14 14:47:22,367 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:47:22] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:54:38,160 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:54:38] "GET / HTTP/1.1" 200 -
+2025-09-14 14:54:38,434 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:54:38] "GET /health HTTP/1.1" 200 -
+2025-09-14 14:54:53,852 - __main__ - INFO - Created session 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83
+2025-09-14 14:54:53,853 - __main__ - INFO - Created session 5b948982-5b13-4276-bc32-eb7b0d17c83b
+2025-09-14 14:54:53,854 - __main__ - INFO - New interview session started: 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83
+2025-09-14 14:54:53,854 - __main__ - INFO - New interview session started: 5b948982-5b13-4276-bc32-eb7b0d17c83b
+2025-09-14 14:54:53,855 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:54:53] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 14:54:53,855 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:54:53] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 14:55:08,834 - __main__ - INFO - Response submitted for session 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83
+2025-09-14 14:55:08,835 - __main__ - INFO - Response submitted for session 5b948982-5b13-4276-bc32-eb7b0d17c83b
+2025-09-14 14:55:09,459 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:55:09,467 - __main__ - INFO - Groq evaluation completed for session 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83: score=0
+2025-09-14 14:55:09,468 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:55:09] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:55:10,475 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:55:10,477 - __main__ - INFO - Groq evaluation completed for session 5b948982-5b13-4276-bc32-eb7b0d17c83b: score=0
+2025-09-14 14:55:10,478 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:55:10] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:55:33,532 - __main__ - INFO - Response submitted for session 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83
+2025-09-14 14:55:33,533 - __main__ - INFO - Response submitted for session 5b948982-5b13-4276-bc32-eb7b0d17c83b
+2025-09-14 14:55:34,021 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:55:34,022 - __main__ - INFO - Groq evaluation completed for session 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83: score=0
+2025-09-14 14:55:34,022 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:55:34] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:55:34,025 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:55:34,026 - __main__ - INFO - Groq evaluation completed for session 5b948982-5b13-4276-bc32-eb7b0d17c83b: score=0
+2025-09-14 14:55:34,027 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:55:34] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:56:23,582 - __main__ - INFO - Response submitted for session 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83
+2025-09-14 14:56:23,583 - __main__ - INFO - Response submitted for session 5b948982-5b13-4276-bc32-eb7b0d17c83b
+2025-09-14 14:56:25,235 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:56:25,237 - __main__ - INFO - Groq evaluation completed for session 5b948982-5b13-4276-bc32-eb7b0d17c83b: score=12
+2025-09-14 14:56:25,238 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:56:25] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:56:32,557 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:56:32,563 - __main__ - ERROR - Failed to parse Groq response as JSON for session 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83: Expecting value: line 1 column 2 (char 1)
+2025-09-14 14:56:32,564 - __main__ - INFO - Fallback evaluation completed for session 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83: score=15
+2025-09-14 14:56:32,564 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:56:32] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:56:40,765 - __main__ - INFO - Response submitted for session 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83
+2025-09-14 14:56:40,767 - __main__ - INFO - Response submitted for session 5b948982-5b13-4276-bc32-eb7b0d17c83b
+2025-09-14 14:56:40,767 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:56:40] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:56:40,768 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:56:40] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:56:46,965 - __main__ - INFO - Response submitted for session 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83
+2025-09-14 14:56:46,966 - __main__ - INFO - Response submitted for session 5b948982-5b13-4276-bc32-eb7b0d17c83b
+2025-09-14 14:56:46,968 - __main__ - INFO - Interview completed for session 7ffe0c1f-8c3b-4dbf-a90b-2cf68bcb6d83
+2025-09-14 14:56:46,968 - __main__ - INFO - Interview completed for session 5b948982-5b13-4276-bc32-eb7b0d17c83b
+2025-09-14 14:56:46,969 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:56:46] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:56:46,976 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:56:46] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:57:27,020 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:57:27] "GET / HTTP/1.1" 200 -
+2025-09-14 14:57:33,415 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:57:33] "OPTIONS /start_interview HTTP/1.1" 200 -
+2025-09-14 14:57:33,417 - __main__ - INFO - Created session a06b8abd-4b8d-4155-92ba-df04b20a0601
+2025-09-14 14:57:33,417 - __main__ - INFO - New interview session started: a06b8abd-4b8d-4155-92ba-df04b20a0601
+2025-09-14 14:57:33,417 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:57:33] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 14:57:40,032 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:57:40] "OPTIONS /submit_response HTTP/1.1" 200 -
+2025-09-14 14:57:40,037 - __main__ - INFO - Response submitted for session a06b8abd-4b8d-4155-92ba-df04b20a0601
+2025-09-14 14:57:40,761 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:57:40,765 - __main__ - INFO - Groq evaluation completed for session a06b8abd-4b8d-4155-92ba-df04b20a0601: score=0
+2025-09-14 14:57:40,766 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:57:40] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:57:52,082 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:57:52] "OPTIONS /submit_response HTTP/1.1" 200 -
+2025-09-14 14:57:52,086 - __main__ - INFO - Response submitted for session a06b8abd-4b8d-4155-92ba-df04b20a0601
+2025-09-14 14:57:58,503 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 14:57:58,504 - __main__ - ERROR - Failed to parse Groq response as JSON for session a06b8abd-4b8d-4155-92ba-df04b20a0601: Expecting value: line 1 column 1 (char 0)
+2025-09-14 14:57:58,504 - __main__ - INFO - Fallback evaluation completed for session a06b8abd-4b8d-4155-92ba-df04b20a0601: score=1
+2025-09-14 14:57:58,505 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:57:58] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 14:59:37,993 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:59:37] "GET / HTTP/1.1" 200 -
+2025-09-14 14:59:38,086 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:59:38] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:00:15,393 - __main__ - INFO - Created session 82c2dc26-5c22-4e34-a417-aab983880022
+2025-09-14 15:00:15,394 - __main__ - INFO - Created session e768720a-4bc7-4ade-9a80-7594f3abbe7b
+2025-09-14 15:00:15,394 - __main__ - INFO - New interview session started: 82c2dc26-5c22-4e34-a417-aab983880022
+2025-09-14 15:00:15,394 - __main__ - INFO - New interview session started: e768720a-4bc7-4ade-9a80-7594f3abbe7b
+2025-09-14 15:00:15,395 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:00:15] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:00:15,396 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:00:15] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:00:51,256 - __main__ - INFO - Response submitted for session 82c2dc26-5c22-4e34-a417-aab983880022
+2025-09-14 15:00:51,259 - __main__ - INFO - Response submitted for session e768720a-4bc7-4ade-9a80-7594f3abbe7b
+2025-09-14 15:00:59,464 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2025-09-14 15:00:59,468 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.399758 seconds
+2025-09-14 15:00:59,573 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2025-09-14 15:00:59,574 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.468997 seconds
+2025-09-14 15:01:03,160 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 15:01:03,163 - __main__ - INFO - Groq evaluation completed for session e768720a-4bc7-4ade-9a80-7594f3abbe7b: score=18
+2025-09-14 15:01:03,172 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:01:03] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:01:03,222 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 15:01:03,223 - __main__ - INFO - Groq evaluation completed for session 82c2dc26-5c22-4e34-a417-aab983880022: score=18
+2025-09-14 15:01:03,224 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:01:03] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:01:59,823 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:01:59] "GET / HTTP/1.1" 200 -
+2025-09-14 15:02:00,061 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:02:00] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:02:01,806 - __main__ - INFO - Created session 9c659523-2251-4db9-a431-ffd708041d0c
+2025-09-14 15:02:01,808 - __main__ - INFO - New interview session started: 9c659523-2251-4db9-a431-ffd708041d0c
+2025-09-14 15:02:01,808 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:02:01] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:02:01,809 - __main__ - INFO - Created session 1974d636-6de3-45f0-986e-fff767a36c48
+2025-09-14 15:02:01,809 - __main__ - INFO - New interview session started: 1974d636-6de3-45f0-986e-fff767a36c48
+2025-09-14 15:02:01,810 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:02:01] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:02:08,513 - __main__ - INFO - Response submitted for session 9c659523-2251-4db9-a431-ffd708041d0c
+2025-09-14 15:02:08,514 - __main__ - INFO - Response submitted for session 1974d636-6de3-45f0-986e-fff767a36c48
+2025-09-14 15:02:08,515 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:02:08] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:02:08,516 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:02:08] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:02:33,036 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:02:33] "GET / HTTP/1.1" 200 -
+2025-09-14 15:02:39,796 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:02:39] "OPTIONS /start_interview HTTP/1.1" 200 -
+2025-09-14 15:02:39,798 - __main__ - INFO - Created session af144c4e-8c98-4926-bfde-1148ce802058
+2025-09-14 15:02:39,798 - __main__ - INFO - New interview session started: af144c4e-8c98-4926-bfde-1148ce802058
+2025-09-14 15:02:39,798 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:02:39] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:03:01,859 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:03:01] "OPTIONS /submit_response HTTP/1.1" 200 -
+2025-09-14 15:03:01,863 - __main__ - INFO - Response submitted for session af144c4e-8c98-4926-bfde-1148ce802058
+2025-09-14 15:03:02,540 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 15:03:02,543 - __main__ - INFO - Groq evaluation completed for session af144c4e-8c98-4926-bfde-1148ce802058: score=0
+2025-09-14 15:03:02,544 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:03:02] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:03:19,659 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:03:19] "GET / HTTP/1.1" 200 -
+2025-09-14 15:03:19,855 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:03:19] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:06:26,658 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:06:26] "GET / HTTP/1.1" 200 -
+2025-09-14 15:06:26,904 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:06:26] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:06:53,120 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:06:53] "GET / HTTP/1.1" 200 -
+2025-09-14 15:06:53,180 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:06:53] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:07:11,168 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:07:11] "GET / HTTP/1.1" 200 -
+2025-09-14 15:07:11,237 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:07:11] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:07:17,246 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:07:17] "GET / HTTP/1.1" 200 -
+2025-09-14 15:07:17,295 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:07:17] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:07:25,825 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:07:25] "GET / HTTP/1.1" 200 -
+2025-09-14 15:07:25,882 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:07:25] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:07:57,741 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:07:57] "GET / HTTP/1.1" 200 -
+2025-09-14 15:07:57,803 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:07:57] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:08:17,969 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:08:17] "GET / HTTP/1.1" 200 -
+2025-09-14 15:08:18,028 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:08:18] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:08:23,737 - __main__ - INFO - Created session ffde4904-e161-4a7e-bda2-4d8c73a5d7e7
+2025-09-14 15:08:23,738 - __main__ - INFO - Created session 0b32e9ea-a10a-4196-96a4-0e4c2bdf3195
+2025-09-14 15:08:23,738 - __main__ - INFO - New interview session started: ffde4904-e161-4a7e-bda2-4d8c73a5d7e7
+2025-09-14 15:08:23,739 - __main__ - INFO - New interview session started: 0b32e9ea-a10a-4196-96a4-0e4c2bdf3195
+2025-09-14 15:08:23,739 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:08:23] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:08:23,740 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:08:23] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:08:46,273 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:08:46] "GET / HTTP/1.1" 200 -
+2025-09-14 15:08:46,334 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:08:46] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:11:27,820 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:11:27] "GET / HTTP/1.1" 200 -
+2025-09-14 15:11:28,064 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:11:28] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:11:47,988 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:11:47] "GET / HTTP/1.1" 200 -
+2025-09-14 15:11:48,048 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:11:48] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:11:49,398 - __main__ - INFO - Created session 2268dc4f-57ae-4205-bce0-08a346fd3e98
+2025-09-14 15:11:49,399 - __main__ - INFO - Created session 567cce9e-74b6-416f-84bb-3c8bc67c6b42
+2025-09-14 15:11:49,399 - __main__ - INFO - New interview session started: 2268dc4f-57ae-4205-bce0-08a346fd3e98
+2025-09-14 15:11:49,399 - __main__ - INFO - New interview session started: 567cce9e-74b6-416f-84bb-3c8bc67c6b42
+2025-09-14 15:11:49,399 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:11:49] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:11:49,400 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:11:49] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:12:18,299 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:12:18] "GET / HTTP/1.1" 200 -
+2025-09-14 15:12:18,363 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:12:18] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:12:21,252 - __main__ - INFO - Created session 5aa6192a-4b4e-4e53-8bf3-297fd74a4c61
+2025-09-14 15:12:21,253 - __main__ - INFO - New interview session started: 5aa6192a-4b4e-4e53-8bf3-297fd74a4c61
+2025-09-14 15:12:21,254 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:12:21] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:12:21,254 - __main__ - INFO - Created session 1116a70b-e4d1-40c3-9b33-6141a687ea7c
+2025-09-14 15:12:21,254 - __main__ - INFO - New interview session started: 1116a70b-e4d1-40c3-9b33-6141a687ea7c
+2025-09-14 15:12:21,254 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:12:21] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:12:28,880 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:12:28] "GET / HTTP/1.1" 200 -
+2025-09-14 15:12:28,938 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:12:28] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:12:32,717 - __main__ - INFO - Created session c699974b-1716-402b-b6f7-668c0bd23ed5
+2025-09-14 15:12:32,718 - __main__ - INFO - Created session 61cf6818-8df0-461c-9ded-e55d7235b8b5
+2025-09-14 15:12:32,718 - __main__ - INFO - New interview session started: c699974b-1716-402b-b6f7-668c0bd23ed5
+2025-09-14 15:12:32,718 - __main__ - INFO - New interview session started: 61cf6818-8df0-461c-9ded-e55d7235b8b5
+2025-09-14 15:12:32,719 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:12:32] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:12:32,721 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:12:32] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:13:13,613 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:13:13] "GET / HTTP/1.1" 200 -
+2025-09-14 15:13:13,669 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:13:13] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:13:42,440 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:13:42] "GET / HTTP/1.1" 200 -
+2025-09-14 15:13:42,499 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:13:42] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:13:43,931 - __main__ - INFO - Created session c6e559e3-238c-4208-a6f6-fe7bed950ddf
+2025-09-14 15:13:43,931 - __main__ - INFO - Created session bbe64d6d-0112-448a-a73b-4011f3e818a1
+2025-09-14 15:13:43,932 - __main__ - INFO - New interview session started: c6e559e3-238c-4208-a6f6-fe7bed950ddf
+2025-09-14 15:13:43,932 - __main__ - INFO - New interview session started: bbe64d6d-0112-448a-a73b-4011f3e818a1
+2025-09-14 15:13:43,932 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:13:43] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:13:43,933 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:13:43] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:14:15,233 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:15] "GET / HTTP/1.1" 200 -
+2025-09-14 15:14:15,298 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:15] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:14:16,782 - __main__ - INFO - Created session 16114df3-480a-49a4-bd2f-79df90e1585a
+2025-09-14 15:14:16,784 - __main__ - INFO - Created session e7946582-41e2-4f3a-918f-4d552c1a59c8
+2025-09-14 15:14:16,784 - __main__ - INFO - New interview session started: 16114df3-480a-49a4-bd2f-79df90e1585a
+2025-09-14 15:14:16,784 - __main__ - INFO - New interview session started: e7946582-41e2-4f3a-918f-4d552c1a59c8
+2025-09-14 15:14:16,784 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:16] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:14:16,785 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:16] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:14:25,197 - __main__ - INFO - Response submitted for session 16114df3-480a-49a4-bd2f-79df90e1585a
+2025-09-14 15:14:25,198 - __main__ - INFO - Response submitted for session e7946582-41e2-4f3a-918f-4d552c1a59c8
+2025-09-14 15:14:25,198 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:25] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:14:25,199 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:25] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:14:47,113 - __main__ - INFO - Response submitted for session 16114df3-480a-49a4-bd2f-79df90e1585a
+2025-09-14 15:14:47,114 - __main__ - INFO - Response submitted for session e7946582-41e2-4f3a-918f-4d552c1a59c8
+2025-09-14 15:14:47,115 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:47] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:14:47,115 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:47] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:14:56,069 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:56] "GET / HTTP/1.1" 200 -
+2025-09-14 15:14:56,262 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:56] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:14:57,832 - __main__ - INFO - Created session f9bebe0d-e537-46d2-9b22-87d7caa7c0bb
+2025-09-14 15:14:57,833 - __main__ - INFO - Created session 514852c4-a65d-4c45-8686-ef65574f87f6
+2025-09-14 15:14:57,833 - __main__ - INFO - New interview session started: f9bebe0d-e537-46d2-9b22-87d7caa7c0bb
+2025-09-14 15:14:57,833 - __main__ - INFO - New interview session started: 514852c4-a65d-4c45-8686-ef65574f87f6
+2025-09-14 15:14:57,833 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:57] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:14:57,834 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:14:57] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:15:06,733 - __main__ - INFO - Response submitted for session f9bebe0d-e537-46d2-9b22-87d7caa7c0bb
+2025-09-14 15:15:06,733 - __main__ - INFO - Response submitted for session 514852c4-a65d-4c45-8686-ef65574f87f6
+2025-09-14 15:15:06,734 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:06] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:06,735 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:06] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:13,046 - __main__ - INFO - Response submitted for session f9bebe0d-e537-46d2-9b22-87d7caa7c0bb
+2025-09-14 15:15:13,047 - __main__ - INFO - Response submitted for session 514852c4-a65d-4c45-8686-ef65574f87f6
+2025-09-14 15:15:13,047 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:13] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:13,048 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:13] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:16,680 - __main__ - INFO - Response submitted for session f9bebe0d-e537-46d2-9b22-87d7caa7c0bb
+2025-09-14 15:15:16,681 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:16] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:16,685 - __main__ - INFO - Response submitted for session 514852c4-a65d-4c45-8686-ef65574f87f6
+2025-09-14 15:15:16,688 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:16] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:27,505 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:27] "GET / HTTP/1.1" 200 -
+2025-09-14 15:15:27,685 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:27] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:15:28,764 - __main__ - INFO - Created session 7e9724c8-06f1-41f0-afe6-c3c88c1f8171
+2025-09-14 15:15:28,765 - __main__ - INFO - Created session 9f8113b9-9e59-4808-bc9e-eb57386bb119
+2025-09-14 15:15:28,765 - __main__ - INFO - New interview session started: 7e9724c8-06f1-41f0-afe6-c3c88c1f8171
+2025-09-14 15:15:28,765 - __main__ - INFO - New interview session started: 9f8113b9-9e59-4808-bc9e-eb57386bb119
+2025-09-14 15:15:28,766 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:28] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:15:28,766 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:28] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:15:34,481 - __main__ - INFO - Response submitted for session 7e9724c8-06f1-41f0-afe6-c3c88c1f8171
+2025-09-14 15:15:34,481 - __main__ - INFO - Response submitted for session 9f8113b9-9e59-4808-bc9e-eb57386bb119
+2025-09-14 15:15:34,482 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:34] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:34,483 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:34] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:40,496 - __main__ - INFO - Response submitted for session 7e9724c8-06f1-41f0-afe6-c3c88c1f8171
+2025-09-14 15:15:40,497 - __main__ - INFO - Response submitted for session 9f8113b9-9e59-4808-bc9e-eb57386bb119
+2025-09-14 15:15:40,497 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:40] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:40,498 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:40] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:43,630 - __main__ - INFO - Response submitted for session 7e9724c8-06f1-41f0-afe6-c3c88c1f8171
+2025-09-14 15:15:43,631 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:43] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:43,631 - __main__ - INFO - Response submitted for session 9f8113b9-9e59-4808-bc9e-eb57386bb119
+2025-09-14 15:15:43,633 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:43] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:47,296 - __main__ - INFO - Response submitted for session 7e9724c8-06f1-41f0-afe6-c3c88c1f8171
+2025-09-14 15:15:47,296 - __main__ - INFO - Response submitted for session 9f8113b9-9e59-4808-bc9e-eb57386bb119
+2025-09-14 15:15:47,297 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:47] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:15:47,297 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:15:47] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:02,723 - __main__ - INFO - Response submitted for session 7e9724c8-06f1-41f0-afe6-c3c88c1f8171
+2025-09-14 15:16:02,723 - __main__ - INFO - Interview completed for session 7e9724c8-06f1-41f0-afe6-c3c88c1f8171
+2025-09-14 15:16:02,724 - __main__ - INFO - Response submitted for session 9f8113b9-9e59-4808-bc9e-eb57386bb119
+2025-09-14 15:16:02,724 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:02] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:02,724 - __main__ - INFO - Interview completed for session 9f8113b9-9e59-4808-bc9e-eb57386bb119
+2025-09-14 15:16:02,725 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:02] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:38,242 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:38] "GET / HTTP/1.1" 200 -
+2025-09-14 15:16:38,424 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:38] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:16:39,696 - __main__ - INFO - Created session 7b62bf7b-2c09-4754-a16c-651f3d84b741
+2025-09-14 15:16:39,697 - __main__ - INFO - Created session 288d74a1-8594-4028-ac25-e171eee24bdf
+2025-09-14 15:16:39,697 - __main__ - INFO - New interview session started: 7b62bf7b-2c09-4754-a16c-651f3d84b741
+2025-09-14 15:16:39,697 - __main__ - INFO - New interview session started: 288d74a1-8594-4028-ac25-e171eee24bdf
+2025-09-14 15:16:39,698 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:39] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:16:39,698 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:39] "POST /start_interview HTTP/1.1" 200 -
+2025-09-14 15:16:44,895 - __main__ - INFO - Response submitted for session 7b62bf7b-2c09-4754-a16c-651f3d84b741
+2025-09-14 15:16:44,895 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:44] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:44,896 - __main__ - INFO - Response submitted for session 288d74a1-8594-4028-ac25-e171eee24bdf
+2025-09-14 15:16:44,897 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:44] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:48,495 - __main__ - INFO - Response submitted for session 7b62bf7b-2c09-4754-a16c-651f3d84b741
+2025-09-14 15:16:48,495 - __main__ - INFO - Response submitted for session 288d74a1-8594-4028-ac25-e171eee24bdf
+2025-09-14 15:16:48,496 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:48] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:48,497 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:48] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:51,744 - __main__ - INFO - Response submitted for session 7b62bf7b-2c09-4754-a16c-651f3d84b741
+2025-09-14 15:16:51,745 - __main__ - INFO - Response submitted for session 288d74a1-8594-4028-ac25-e171eee24bdf
+2025-09-14 15:16:51,745 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:51] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:51,746 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:51] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:55,077 - __main__ - INFO - Response submitted for session 7b62bf7b-2c09-4754-a16c-651f3d84b741
+2025-09-14 15:16:55,078 - __main__ - INFO - Response submitted for session 288d74a1-8594-4028-ac25-e171eee24bdf
+2025-09-14 15:16:55,078 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:55] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:55,079 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:55] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:59,044 - __main__ - INFO - Response submitted for session 7b62bf7b-2c09-4754-a16c-651f3d84b741
+2025-09-14 15:16:59,045 - __main__ - INFO - Response submitted for session 288d74a1-8594-4028-ac25-e171eee24bdf
+2025-09-14 15:16:59,045 - __main__ - INFO - Interview completed for session 7b62bf7b-2c09-4754-a16c-651f3d84b741
+2025-09-14 15:16:59,045 - __main__ - INFO - Interview completed for session 288d74a1-8594-4028-ac25-e171eee24bdf
+2025-09-14 15:16:59,046 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:59] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:16:59,046 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:16:59] "POST /submit_response HTTP/1.1" 200 -
+2025-09-14 15:17:12,008 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:17:12] "GET / HTTP/1.1" 200 -
+2025-09-14 15:17:12,208 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:17:12] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:20:24,266 - werkzeug - INFO -  * Detected change in '/Users/rishabhbhardwaj/Desktop/Excel Mock Interviewer/app.py', reloading
+2025-09-14 15:20:24,347 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 15:20:24,680 - __main__ - INFO - Groq client initialized successfully
+2025-09-14 15:20:24,681 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 15:20:24,681 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 15:20:24,681 - __main__ - INFO - Groq client available: True
+2025-09-14 15:20:24,711 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 15:20:24,721 - werkzeug - INFO -  * Debugger PIN: 136-019-522
+2025-09-14 15:20:29,355 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:20:29] "GET / HTTP/1.1" 200 -
+2025-09-14 15:20:29,579 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:20:29] "GET /health HTTP/1.1" 200 -
+2025-09-14 15:29:21,108 - __main__ - INFO - Groq client initialized successfully
+2025-09-14 15:29:21,109 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 15:29:21,109 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 15:29:21,109 - __main__ - INFO - Groq client available: True
+2025-09-14 15:29:21,148 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.34:5000
+2025-09-14 15:29:21,149 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-14 15:29:21,149 - werkzeug - INFO -  * Restarting with stat
+2025-09-14 15:29:21,339 - __main__ - INFO - Groq client initialized successfully
+2025-09-14 15:29:21,339 - __main__ - INFO - ExcelInterviewer initialized
+2025-09-14 15:29:21,340 - __main__ - INFO - Starting Excel Mock Interviewer API on 0.0.0.0:5000
+2025-09-14 15:29:21,340 - __main__ - INFO - Groq client available: True
+2025-09-14 15:29:21,364 - werkzeug - WARNING -  * Debugger is active!
+2025-09-14 15:29:21,372 - werkzeug - INFO -  * Debugger PIN: 136-019-522
+2025-09-14 15:29:30,201 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:29:30] "GET / HTTP/1.1" 200 -
+2025-09-14 15:29:30,542 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 15:29:30] "GET /health HTTP/1.1" 200 -

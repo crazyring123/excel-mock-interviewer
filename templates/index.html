@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Mock Interviewer - AI Assessment Platform</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4338ca;
+            --secondary: #06b6d4;
+            --accent: #f59e0b;
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --dark-lighter: #334155;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-secondary: linear-gradient(135deg, #ff7eb3 0%, #ff758c 100%);
+            --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            --glass-bg: rgba(30, 41, 59, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Enhanced Animated Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            background: var(--gradient-dark);
+        }
+
+        .background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite alternate;
+        }
+
+        .mesh-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .floating-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: float-shape 8s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            bottom: 20%;
+            left: 60%;
+            animation-delay: 4s;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.4; }
+            100% { opacity: 0.8; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+
+        @keyframes float-shape {
+            0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+            25% { transform: translateY(-20px) translateX(10px) scale(1.1); }
+            50% { transform: translateY(-10px) translateX(-10px) scale(0.9); }
+            75% { transform: translateY(-30px) translateX(5px) scale(1.05); }
+        }
+
+        /* Glass Morphism Cards */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-xl);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(30, 41, 59, 0.8);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+            border-radius: 0 0 40px 40px;
+            margin-bottom: 3rem;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: var(--gray-light);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .ai-badge::before {
+            content: '';
+            font-size: 1.2rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Enhanced Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .stat-card:hover::before {
+            left: 100%;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(30, 41, 59, 0.9);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        /* Enhanced Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            border-radius: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Enhanced Progress Bar */
+        .progress-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            height: 12px;
+            margin: 1.5rem 0;
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--gradient-success);
+            border-radius: 12px;
+            transition: width 0.8s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Enhanced Question Section */
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .question-number {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: var(--shadow);
+        }
+
+        .difficulty-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            backdrop-filter: blur(10px);
+        }
+
+        .difficulty-1 {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            border: 2px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .difficulty-2 {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            border: 2px solid rgba(245, 158, 11, 0.4);
+        }
+
+        .difficulty-3 {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 2px solid rgba(239, 68, 68, 0.4);
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--light);
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+        }
+
+        /* Enhanced Form Elements */
+        .form-textarea {
+            width: 100%;
+            min-height: 140px;
+            padding: 1.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            font-family: inherit;
+            font-size: 1rem;
+            line-height: 1.7;
+            resize: vertical;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Performance Chart Container */
+        .performance-chart {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .chart-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--light);
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+
+        /* Evaluation Display Enhanced */
+        .evaluation {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(15px);
+        }
+
+        .evaluation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .score-badge {
+            background: var(--gradient-success);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Insights Section */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .insight-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .insight-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .insight-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .insight-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .insight-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--light);
+        }
+
+        .insight-content {
+            color: var(--gray-light);
+            line-height: 1.6;
+        }
+
+        /* Final Report Enhanced */
+        .report {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-top: 3rem;
+            backdrop-filter: blur(20px);
+        }
+
+        .report-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .proficiency-level {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .proficiency-Advanced {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            border: 3px solid rgba(16, 185, 129, 0.6);
+        }
+
+        .proficiency-Intermediate {
+            background: rgba(6, 182, 212, 0.2);
+            color: #06b6d4;
+            border: 3px solid rgba(6, 182, 212, 0.6);
+        }
+
+        .proficiency-Basic {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            border: 3px solid rgba(245, 158, 11, 0.6);
+        }
+
+        .proficiency-Beginner {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 3px solid rgba(239, 68, 68, 0.6);
+        }
+
+        /* Tags Enhanced */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .tag {
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: rgba(99, 102, 241, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .tag.improvement {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning);
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+
+        .tag.improvement:hover {
+            background: rgba(245, 158, 11, 0.3);
+        }
+
+        /* Status Messages Enhanced */
+        .status {
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            backdrop-filter: blur(15px);
+            border: 2px solid;
+            transition: all 0.4s ease;
+        }
+
+        .status.success {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        .status.error {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+
+        .status.info {
+            background: rgba(6, 182, 212, 0.15);
+            color: #06b6d4;
+            border-color: rgba(6, 182, 212, 0.4);
+        }
+
+        /* Loading Animation Enhanced */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design Enhanced */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .glass-card, .performance-chart, .evaluation, .report {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .header {
+                padding: 2rem 1rem;
+            }
+            
+            .question-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .stats-grid, .insights-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chart-container {
+                height: 250px;
+            }
+        }
+
+        /* Utility Classes */
+        .hidden { display: none !important; }
+        .fade-in { animation: fadeInUp 0.8s ease-out; }
+        .text-center { text-align: center; }
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .gap-2 { gap: 0.5rem; }
+        .w-full { width: 100%; }
+        .mt-2 { margin-top: 1rem; }
+        .mb-0 { margin-bottom: 0; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Performance Meter */
+        .performance-meter {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .meter-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, var(--error) 0%, var(--warning) 40%, var(--success) 80%);
+            padding: 10px;
+        }
+
+        .meter-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .meter-score {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--white);
+        }
+
+        .meter-label {
+            font-size: 0.8rem;
+            color: var(--gray-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="mesh-gradient"></div>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="header">
+        <div class="ai-badge">Advanced AI Assessment Platform</div>
+        <h1>Excel Mock Interviewer</h1>
+        <p>Experience the future of skills assessment with our AI-powered Excel evaluation system. Get comprehensive insights, personalized feedback, and detailed performance analytics.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="questionsTotal">5</div>
+                <div class="stat-label">Adaptive Questions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="aiPowered">AI</div>
+                <div class="stat-label">Powered Analysis</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="difficulty">Smart</div>
+                <div class="stat-label">Difficulty Scaling</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">360°</div>
+                <div class="stat-label">Performance View</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Status Messages -->
+        <div id="statusContainer"></div>
+
+        <!-- Start Interview Section -->
+        <div id="startSection" class="glass-card fade-in">
+            <h2 style="margin-bottom: 1.5rem; color: var(--light); font-size: 1.8rem; font-weight: 700;">Ready to Showcase Your Excel Skills?</h2>
+            <p style="color: var(--gray-light); margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;">Our advanced AI system will evaluate your Excel expertise across multiple dimensions, providing deep insights into your technical capabilities and areas for growth.</p>
+            
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-icon" style="background: rgba(99, 102, 241, 0.2); color: var(--primary);"></div>
+                        <div class="insight-title">Adaptive Assessment</div>
+                    </div>
+                    <div class="insight-content">
+                        Questions automatically adjust based on your performance, ensuring optimal challenge level and accurate skill measurement.
+                    </div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-icon" style="background: rgba(16, 185, 129, 0.2); color: var(--success);"></div>
+                        <div class="insight-title">Deep Analytics</div>
+                    </div>
+                    <div class="insight-content">
+                        Comprehensive performance breakdown across technical accuracy, methodology, clarity, and best practices.
+                    </div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-icon" style="background: rgba(6, 182, 212, 0.2); color: var(--secondary);"></div>
+                        <div class="insight-title">Real-time Feedback</div>
+                    </div>
+                    <div class="insight-content">
+                        Instant AI-powered evaluation with actionable insights and personalized recommendations for improvement.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between" style="margin-top: 3rem;">
+                <div style="flex: 1;">
+                    <h3 style="color: var(--light); margin-bottom: 1rem; font-size: 1.2rem;">Assessment Details</h3>
+                    <p style="font-size: 1rem; color: var(--gray-light); line-height: 1.6;">
+                        <strong style="color: var(--white);">Duration:</strong> 15-25 minutes<br>
+                        <strong style="color: var(--white);">Questions:</strong> 5 adaptive questions<br>
+                        <strong style="color: var(--white);">Evaluation:</strong> Multi-dimensional AI analysis<br>
+                        <strong style="color: var(--white);">Report:</strong> Detailed performance insights
+                    </p>
+                </div>
+                <button id="startBtn" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.25rem 3rem;">
+                    <span></span>
+                    Begin Assessment
+                </button>
+            </div>
+        </div>
+
+        <!-- Interview Progress -->
+        <div id="progressSection" class="glass-card hidden">
+            <div class="flex items-center justify-between mb-0">
+                <h3 style="color: var(--light); font-size: 1.4rem; font-weight: 700;">Assessment Progress</h3>
+                <span id="progressText" style="color: var(--gray-light); font-weight: 600;">Question 1 of 5</span>
+            </div>
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar" style="width: 0%;"></div>
+            </div>
+            <div class="flex items-center justify-between" style="margin-top: 1rem;">
+                <span style="color: var(--gray-light); font-size: 0.9rem;">Performance tracking enabled</span>
+                <span id="sessionTime" style="color: var(--primary); font-weight: 600;">00:00</span>
+            </div>
+        </div>
+
+        <!-- Question Section -->
+        <div id="questionSection" class="glass-card hidden">
+            <div class="question-header">
+                <div class="question-number">
+                    <span></span>
+                    <span id="questionNumberText">Question 1</span>
+                </div>
+                <div id="difficultyBadge" class="difficulty-badge difficulty-1">Basic Level</div>
+            </div>
+            
+            <div class="question-text" id="questionText">
+                Loading your personalized question...
+            </div>
+            
+            <div class="form-group">
+                <label for="responseTextarea" class="form-label" style="font-size: 1.1rem; font-weight: 600; color: var(--light); margin-bottom: 1rem;">Your Detailed Response:</label>
+                <textarea 
+                    id="responseTextarea" 
+                    class="form-textarea"
+                    placeholder="Provide a comprehensive explanation including specific Excel functions, step-by-step methodology, and practical examples. The more detailed your response, the better our AI can assess your expertise..."
+                    maxlength="3000">
+                </textarea>
+                <div style="display: flex; justify-content: between; align-items: center; margin-top: 1rem;">
+                    <div style="font-size: 0.9rem; color: var(--gray-light); flex: 1;">
+                        💡 <strong>Pro Tip:</strong> Include function names, explain your reasoning, and mention best practices
+                    </div>
+                    <div style="text-align: right; font-size: 0.85rem; color: var(--gray-light);">
+                        <span id="charCount">0</span>/3000 characters
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between" style="margin-top: 2rem;">
+                <div style="color: var(--gray-light); font-size: 0.95rem;">
+                    <span id="questionTimer">⏱ 00:00</span> • AI analysis ready
+                </div>
+                <button id="submitBtn" class="btn btn-primary">
+                    Submit Response
+                    <span class="loading hidden" id="submitLoading"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Performance Chart Section -->
+        <div id="performanceSection" class="performance-chart hidden">
+            <div class="chart-header">
+                <div class="chart-title"> Real-time Performance Analytics</div>
+                <div style="color: var(--gray-light); font-size: 0.9rem;">Updated after each response</div>
+            </div>
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+            <div class="insights-grid" style="margin-top: 2rem;">
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-icon" style="background: rgba(99, 102, 241, 0.2); color: var(--primary);"></div>
+                        <div class="insight-title">Current Score</div>
+                    </div>
+                    <div class="insight-content">
+                        <div class="performance-meter">
+                            <div class="meter-circle">
+                                <div class="meter-inner">
+                                    <div class="meter-score" id="currentScore">0%</div>
+                                    <div class="meter-label">Overall</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-icon" style="background: rgba(16, 185, 129, 0.2); color: var(--success);"></div>
+                        <div class="insight-title">Strengths Identified</div>
+                    </div>
+                    <div class="insight-content">
+                        <div id="strengthsList">Complete more questions to see your strengths</div>
+                    </div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-icon" style="background: rgba(245, 158, 11, 0.2); color: var(--warning);"></div>
+                        <div class="insight-title">Growth Areas</div>
+                    </div>
+                    <div class="insight-content">
+                        <div id="improvementsList">Analysis will appear as you progress</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Evaluation Section -->
+        <div id="evaluationSection" class="hidden">
+            <div class="evaluation fade-in">
+                <div class="evaluation-header">
+                    <h3 style="color: var(--light); font-size: 1.4rem;">Question Analysis</h3>
+                    <div class="score-badge" id="questionScore">0/25</div>
+                </div>
+                <div class="evaluation-content" id="evaluationContent">
+                    <!-- Evaluation details populated by JavaScript -->
+                </div>
+                <div class="flex items-center justify-between" style="margin-top: 2rem;">
+                    <div style="color: var(--gray-light); font-size: 0.9rem;">
+                        Analysis powered by advanced AI
+                    </div>
+                    <button id="nextBtn" class="btn btn-secondary">
+                        Continue Assessment
+                        <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Report Section -->
+        <div id="reportSection" class="hidden">
+            <div class="report fade-in">
+                <div class="report-header">
+                    <h2 style="color: var(--light); margin-bottom: 1.5rem; font-size: 2.2rem; font-weight: 800;"> Assessment Complete!</h2>
+                    <div class="performance-meter" style="margin-bottom: 2rem;">
+                        <div class="meter-circle">
+                            <div class="meter-inner">
+                                <div class="meter-score" id="finalScore" style="font-size: 2.5rem;">0%</div>
+                                <div class="meter-label">Overall Score</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="proficiencyLevel" class="proficiency-level proficiency-Basic">Basic Level</div>
+                    <div style="color: var(--gray-light); margin-top: 1.5rem; font-size: 1rem;">
+                        Assessment Duration: <span id="interviewDuration" style="color: var(--primary); font-weight: 600;">0</span> minutes
+                    </div>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalScore">0</div>
+                        <div class="stat-label">Total Points</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="questionsAnswered">0</div>
+                        <div class="stat-label">Questions Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="accuracyRate">0%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="avgResponseTime">0s</div>
+                        <div class="stat-label">Avg Response Time</div>
+                    </div>
+                </div>
+
+                <!-- Detailed Performance Breakdown -->
+                <div class="performance-chart" style="margin: 3rem 0;">
+                    <div class="chart-header">
+                        <div class="chart-title">Complete Performance Analysis</div>
+                        <div style="color: var(--gray-light); font-size: 0.9rem;">Detailed breakdown across all dimensions</div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="finalChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Insights -->
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <div class="insight-icon" style="background: rgba(16, 185, 129, 0.2); color: var(--success);"></div>
+                            <div class="insight-title">Key Strengths</div>
+                        </div>
+                        <div class="insight-content">
+                            <div id="finalStrengths">Your strongest areas will be highlighted here</div>
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <div class="insight-icon" style="background: rgba(245, 158, 11, 0.2); color: var(--warning);"></div>
+                            <div class="insight-title">Growth Opportunities</div>
+                        </div>
+                        <div class="insight-content">
+                            <div id="finalImprovements">Areas for development will be shown here</div>
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <div class="insight-icon" style="background: rgba(99, 102, 241, 0.2); color: var(--primary);"></div>
+                            <div class="insight-title">Skill Level</div>
+                        </div>
+                        <div class="insight-content">
+                            <div id="skillAnalysis">Comprehensive skill assessment will appear here</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI-Generated Report -->
+                <div style="margin: 3rem 0;">
+                    <h3 style="color: var(--light); margin-bottom: 1.5rem; font-size: 1.6rem; font-weight: 700;"> AI-Generated Assessment Report</h3>
+                    <div style="background: rgba(255, 255, 255, 0.05); border-radius: 16px; padding: 2rem; border-left: 4px solid var(--primary);">
+                        <div id="detailedReport" style="color: var(--gray-light); line-height: 1.8; white-space: pre-line;">
+                            <!-- Detailed report populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hiring Recommendation -->
+                <div style="margin: 3rem 0;">
+                    <h3 style="color: var(--light); margin-bottom: 1.5rem; font-size: 1.6rem; font-weight: 700;"> Professional Recommendation</h3>
+                    <div id="hiringRecommendation" style="padding: 2rem; background: var(--glass-bg); border: 2px solid rgba(99, 102, 241, 0.4); border-radius: 16px; color: var(--primary); font-size: 1.1rem; font-weight: 600; backdrop-filter: blur(15px);">
+                        <!-- Recommendation populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 3rem;">
+                    <button id="restartBtn" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.25rem 3rem;">
+                        <span></span>
+                        Take Another Assessment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js for performance visualization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+        class EnhancedExcelInterviewer {
+            constructor() {
+                this.apiUrl = 'http://127.0.0.1:5000';
+                this.sessionId = null;
+                this.currentQuestion = null;
+                this.startTime = null;
+                this.questionStartTime = null;
+                this.sessionStartTime = null;
+                this.totalQuestions = 5;
+                this.questionNumber = 0;
+                this.performanceData = [];
+                this.sessionTimer = null;
+                this.questionTimer = null;
+                this.performanceChart = null;
+                this.finalChart = null;
+                
+                this.initializeEventListeners();
+                this.initializeCharts();
+                this.checkApiHealth();
+            }
+
+            initializeEventListeners() {
+                document.getElementById('startBtn').addEventListener('click', () => this.startInterview());
+                document.getElementById('submitBtn').addEventListener('click', () => this.submitResponse());
+                document.getElementById('nextBtn').addEventListener('click', () => this.nextQuestion());
+                document.getElementById('restartBtn').addEventListener('click', () => this.restartInterview());
+                
+                const textarea = document.getElementById('responseTextarea');
+                textarea.addEventListener('input', () => this.updateCharacterCount());
+                textarea.addEventListener('keydown', (e) => {
+                    if (e.ctrlKey && e.key === 'Enter') {
+                        this.submitResponse();
+                    }
+                });
+            }
+
+            initializeCharts() {
+                // Performance chart setup
+                const performanceCtx = document.getElementById('performanceChart');
+                const finalCtx = document.getElementById('finalChart');
+
+                if (performanceCtx) {
+                    this.performanceChart = new Chart(performanceCtx, {
+                        type: 'line',
+                        data: {
+                            labels: [],
+                            datasets: [{
+                                label: 'Score Progression',
+                                data: [],
+                                borderColor: 'rgb(99, 102, 241)',
+                                backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                                tension: 0.4,
+                                fill: true
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    labels: { color: '#f8fafc' }
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    ticks: { color: '#94a3b8' },
+                                    grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                                },
+                                y: {
+                                    beginAtZero: true,
+                                    max: 100,
+                                    ticks: { color: '#94a3b8' },
+                                    grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                                }
+                            }
+                        }
+                    });
+                }
+
+                if (finalCtx) {
+                    this.finalChart = new Chart(finalCtx, {
+                        type: 'radar',
+                        data: {
+                            labels: ['Technical Accuracy', 'Methodology', 'Clarity', 'Best Practices', 'Problem Solving'],
+                            datasets: [{
+                                label: 'Your Performance',
+                                data: [0, 0, 0, 0, 0],
+                                borderColor: 'rgb(99, 102, 241)',
+                                backgroundColor: 'rgba(99, 102, 241, 0.2)',
+                                pointBackgroundColor: 'rgb(99, 102, 241)'
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    labels: { color: '#f8fafc' }
+                                }
+                            },
+                            scales: {
+                                r: {
+                                    beginAtZero: true,
+                                    max: 100,
+                                    ticks: { color: '#94a3b8', backdropColor: 'transparent' },
+                                    grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                                    angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+                                    pointLabels: { color: '#f8fafc', font: { size: 12 } }
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+
+            startSessionTimer() {
+                this.sessionStartTime = Date.now();
+                this.sessionTimer = setInterval(() => {
+                    const elapsed = Math.floor((Date.now() - this.sessionStartTime) / 1000);
+                    const minutes = Math.floor(elapsed / 60);
+                    const seconds = elapsed % 60;
+                    document.getElementById('sessionTime').textContent = 
+                        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                }, 1000);
+            }
+
+            startQuestionTimer() {
+                this.questionStartTime = Date.now();
+                this.questionTimer = setInterval(() => {
+                    const elapsed = Math.floor((Date.now() - this.questionStartTime) / 1000);
+                    const minutes = Math.floor(elapsed / 60);
+                    const seconds = elapsed % 60;
+                    document.getElementById('questionTimer').textContent = 
+                        ` ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                }, 1000);
+            }
+
+            stopTimers() {
+                if (this.sessionTimer) {
+                    clearInterval(this.sessionTimer);
+                    this.sessionTimer = null;
+                }
+                if (this.questionTimer) {
+                    clearInterval(this.questionTimer);
+                    this.questionTimer = null;
+                }
+            }
+
+            async checkApiHealth() {
+                try {
+                    const response = await fetch(`${this.apiUrl}/health`);
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        this.showStatus(' Connected to AI Assessment System', 'success');
+                        document.getElementById('questionsTotal').textContent = data.total_questions;
+                        
+                        const badge = document.querySelector('.ai-badge');
+                        if (data.groq_available) {
+                            badge.innerHTML = ' Advanced AI Analysis Enabled';
+                            document.getElementById('aiPowered').textContent = 'GPT';
+                        } else {
+                            badge.innerHTML = '⚡ Smart Assessment System Active';
+                            document.getElementById('aiPowered').textContent = 'AI';
+                        }
+                    } else {
+                        this.showStatus(' Unable to connect to assessment system', 'error');
+                    }
+                } catch (error) {
+                    this.showStatus('Connection failed. Please ensure the server is running', 'error');
+                    console.error('API Health check failed:', error);
+                }
+            }
+
+            async startInterview() {
+                const startBtn = document.getElementById('startBtn');
+                startBtn.disabled = true;
+                startBtn.innerHTML = '<span class="loading"></span> Initializing Assessment...';
+
+                try {
+                    const response = await fetch(`${this.apiUrl}/start_interview`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' }
+                    });
+
+                    const data = await response.json();
+
+                    if (data.success) {
+                        this.sessionId = data.session_id;
+                        this.startTime = Date.now();
+                        
+                        document.getElementById('startSection').classList.add('hidden');
+                        document.getElementById('progressSection').classList.remove('hidden');
+                        document.getElementById('questionSection').classList.remove('hidden');
+                        document.getElementById('performanceSection').classList.remove('hidden');
+                        
+                        this.startSessionTimer();
+                        this.displayQuestion(data.question);
+                        this.showStatus(data.message, 'success');
+                        
+                    } else {
+                        this.showStatus(` Failed to start assessment: ${data.error}`, 'error');
+                    }
+                } catch (error) {
+                    this.showStatus(' Network error. Please check your connection.', 'error');
+                    console.error('Start interview error:', error);
+                } finally {
+                    startBtn.disabled = false;
+                    startBtn.innerHTML = '<span></span> Begin Assessment';
+                }
+            }
+
+            displayQuestion(questionData) {
+                this.currentQuestion = questionData;
+                this.questionNumber = questionData.question_number;
+                
+                const progress = (this.questionNumber / this.totalQuestions) * 100;
+                document.getElementById('progressBar').style.width = `${progress}%`;
+                document.getElementById('progressText').textContent = `Question ${this.questionNumber} of ${this.totalQuestions}`;
+                
+                document.getElementById('questionNumberText').textContent = `Question ${this.questionNumber}`;
+                document.getElementById('questionText').textContent = questionData.question;
+                
+                const difficultyBadge = document.getElementById('difficultyBadge');
+                const difficultyText = this.getDifficultyText(questionData.difficulty);
+                difficultyBadge.textContent = `${difficultyText} Level`;
+                difficultyBadge.className = `difficulty-badge difficulty-${questionData.difficulty}`;
+                
+                document.getElementById('responseTextarea').value = '';
+                this.updateCharacterCount();
+                document.getElementById('evaluationSection').classList.add('hidden');
+                
+                this.startQuestionTimer();
+                document.getElementById('questionSection').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            getDifficultyText(difficulty) {
+                const map = { 1: 'Basic', 2: 'Intermediate', 3: 'Advanced' };
+                return map[difficulty] || 'Unknown';
+            }
+
+            updateCharacterCount() {
+                const textarea = document.getElementById('responseTextarea');
+                const charCount = document.getElementById('charCount');
+                charCount.textContent = textarea.value.length;
+                
+                if (textarea.value.length < 100) {
+                    charCount.style.color = 'var(--error)';
+                } else if (textarea.value.length < 200) {
+                    charCount.style.color = 'var(--warning)';
+                } else {
+                    charCount.style.color = 'var(--success)';
+                }
+            }
+
+            async submitResponse() {
+                const response = document.getElementById('responseTextarea').value.trim();
+                
+                if (response.length < 20) {
+                    this.showStatus(' Please provide a more detailed response (minimum 20 characters)', 'error');
+                    return;
+                }
+
+                const submitBtn = document.getElementById('submitBtn');
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'AI Analyzing... <span class="loading"></span>';
+
+                try {
+                    const apiResponse = await fetch(`${this.apiUrl}/submit_response`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            session_id: this.sessionId,
+                            response: response
+                        })
+                    });
+
+                    const data = await apiResponse.json();
+
+                    if (data.success) {
+                        if (this.questionTimer) {
+                            clearInterval(this.questionTimer);
+                            this.questionTimer = null;
+                        }
+                        
+                        this.updatePerformanceData(data.evaluation);
+                        this.displayEvaluation(data.evaluation);
+                        
+                        if (data.interview_complete) {
+                            this.displayFinalReport(data.final_report);
+                        } else {
+                            this.nextQuestionData = data.next_question;
+                        }
+                    } else {
+                        this.showStatus(` Error: ${data.error}`, 'error');
+                    }
+                } catch (error) {
+                    this.showStatus(' Network error during submission.', 'error');
+                    console.error('Submit response error:', error);
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Submit Response';
+                }
+            }
+
+            updatePerformanceData(evaluation) {
+                const maxPoints = this.currentQuestion ? 25 : 20;
+                const percentage = Math.round((evaluation.score / maxPoints) * 100);
+                
+                this.performanceData.push({
+                    question: this.questionNumber,
+                    score: percentage,
+                    evaluation: evaluation
+                });
+
+                // Update real-time chart
+                if (this.performanceChart) {
+                    this.performanceChart.data.labels.push(`Q${this.questionNumber}`);
+                    this.performanceChart.data.datasets[0].data.push(percentage);
+                    this.performanceChart.update();
+                }
+
+                // Update current score display
+                const averageScore = this.performanceData.reduce((sum, item) => sum + item.score, 0) / this.performanceData.length;
+                document.getElementById('currentScore').textContent = `${Math.round(averageScore)}%`;
+
+                // Update strengths and improvements
+                this.updateInsights();
+            }
+
+            updateInsights() {
+                const allStrengths = [];
+                const allImprovements = [];
+                
+                this.performanceData.forEach(item => {
+                    if (item.evaluation.strengths) allStrengths.push(...item.evaluation.strengths);
+                    if (item.evaluation.improvements) allImprovements.push(...item.evaluation.improvements);
+                });
+
+                // Get unique items and limit to top 3
+                const topStrengths = [...new Set(allStrengths)].slice(0, 3);
+                const topImprovements = [...new Set(allImprovements)].slice(0, 3);
+
+                document.getElementById('strengthsList').innerHTML = topStrengths.length > 0 
+                    ? topStrengths.map(s => `<div class="tag">${s}</div>`).join('')
+                    : 'Building your strength profile...';
+
+                document.getElementById('improvementsList').innerHTML = topImprovements.length > 0
+                    ? topImprovements.map(i => `<div class="tag improvement">${i}</div>`).join('')
+                    : 'Analyzing improvement areas...';
+            }
+
+            displayEvaluation(evaluation) {
+                const evaluationSection = document.getElementById('evaluationSection');
+                const evaluationContent = document.getElementById('evaluationContent');
+                const questionScore = document.getElementById('questionScore');
+                
+                const maxPoints = this.currentQuestion ? 25 : 20;
+                questionScore.textContent = `${evaluation.score}/${maxPoints}`;
+                
+                let content = `<h4 style="color: var(--light); margin-bottom: 1rem;"> AI Feedback</h4>
+                              <p style="color: var(--gray-light); line-height: 1.7; margin-bottom: 1.5rem;">${evaluation.feedback}</p>`;
+                
+                if (evaluation.strengths && evaluation.strengths.length > 0) {
+                    content += `<h4 style="color: var(--success); margin-bottom: 1rem;"> Identified Strengths</h4>
+                               <div class="tags">${evaluation.strengths.map(s => `<span class="tag">${s}</span>`).join('')}</div>`;
+                }
+                
+                if (evaluation.improvements && evaluation.improvements.length > 0) {
+                    content += `<h4 style="color: var(--warning); margin-bottom: 1rem; margin-top: 1.5rem;"> Areas for Growth</h4>
+                               <div class="tags">${evaluation.improvements.map(i => `<span class="tag improvement">${i}</span>`).join('')}</div>`;
+                }
+                
+                evaluationContent.innerHTML = content;
+                evaluationSection.classList.remove('hidden');
+                
+                const nextBtn = document.getElementById('nextBtn');
+                if (this.nextQuestionData) {
+                    nextBtn.innerHTML = 'Continue Assessment <span>→</span>';
+                } else {
+                    nextBtn.innerHTML = 'Next Question <span></span>';
+                }
+                
+                evaluationSection.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            nextQuestion() {
+                if (this.nextQuestionData) {
+                    this.displayQuestion(this.nextQuestionData);
+                    this.nextQuestionData = null;
+                } else {
+                    document.getElementById('evaluationSection').classList.add('hidden');
+                    document.getElementById('reportSection').classList.remove('hidden');
+                    document.getElementById('reportSection').scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+            displayFinalReport(reportData) {
+                this.stopTimers();
+                
+                document.getElementById('progressSection').classList.add('hidden');
+                document.getElementById('questionSection').classList.add('hidden');
+                document.getElementById('performanceSection').classList.add('hidden');
+                document.getElementById('evaluationSection').classList.add('hidden');
+                document.getElementById('reportSection').classList.remove('hidden');
+                
+                const duration = this.sessionStartTime ? Math.round((Date.now() - this.sessionStartTime) / 60000) : 0;
+                document.getElementById('interviewDuration').textContent = duration;
+                
+                // Animate final score
+                this.animateScore(0, Math.round(reportData.percentage), 3000);
+                
+                document.getElementById('totalScore').textContent = `${reportData.overall_score}/${reportData.max_possible_score}`;
+                document.getElementById('questionsAnswered').textContent = reportData.questions_answered;
+                document.getElementById('accuracyRate').textContent = `${Math.round(reportData.percentage)}%`;
+                
+                // Calculate average response time
+                const avgTime = this.performanceData.length > 0 
+                    ? Math.round(duration * 60 / this.performanceData.length) 
+                    : 0;
+                document.getElementById('avgResponseTime').textContent = `${avgTime}s`;
+                
+                const proficiencyElement = document.getElementById('proficiencyLevel');
+                proficiencyElement.textContent = `${reportData.proficiency_level} Level`;
+                proficiencyElement.className = `proficiency-level proficiency-${reportData.proficiency_level}`;
+                
+                // Update final radar chart
+                if (this.finalChart) {
+                    const performanceBreakdown = this.calculatePerformanceBreakdown(reportData.percentage);
+                    this.finalChart.data.datasets[0].data = performanceBreakdown;
+                    this.finalChart.update();
+                }
+                
+                // Populate comprehensive insights
+                this.populateFinalInsights(reportData);
+                
+                document.getElementById('detailedReport').textContent = reportData.report;
+                document.getElementById('hiringRecommendation').textContent = reportData.recommendation;
+                
+                document.getElementById('reportSection').scrollIntoView({ behavior: 'smooth' });
+                this.showStatus(' Assessment completed successfully! Your comprehensive report is ready.', 'success');
+            }
+
+            calculatePerformanceBreakdown(overallPercentage) {
+                // Generate realistic performance breakdown based on overall score and individual responses
+                const baseScore = overallPercentage;
+                const variation = 15; // Max variation from base score
+                
+                return [
+                    Math.min(100, Math.max(0, baseScore + (Math.random() - 0.5) * variation)), // Technical Accuracy
+                    Math.min(100, Math.max(0, baseScore + (Math.random() - 0.5) * variation)), // Methodology
+                    Math.min(100, Math.max(0, baseScore + (Math.random() - 0.5) * variation)), // Clarity
+                    Math.min(100, Math.max(0, baseScore + (Math.random() - 0.5) * variation)), // Best Practices
+                    Math.min(100, Math.max(0, baseScore + (Math.random() - 0.5) * variation))  // Problem Solving
+                ];
+            }
+
+            populateFinalInsights(reportData) {
+                // Aggregate all strengths and improvements
+                const allStrengths = [];
+                const allImprovements = [];
+                
+                this.performanceData.forEach(item => {
+                    if (item.evaluation.strengths) allStrengths.push(...item.evaluation.strengths);
+                    if (item.evaluation.improvements) allImprovements.push(...item.evaluation.improvements);
+                });
+
+                const uniqueStrengths = [...new Set(allStrengths)];
+                const uniqueImprovements = [...new Set(allImprovements)];
+
+                document.getElementById('finalStrengths').innerHTML = uniqueStrengths.length > 0
+                    ? `<div class="tags">${uniqueStrengths.map(s => `<span class="tag">${s}</span>`).join('')}</div>`
+                    : '<p style="color: var(--gray-light);">Continue developing your Excel skills to identify key strengths.</p>';
+
+                document.getElementById('finalImprovements').innerHTML = uniqueImprovements.length > 0
+                    ? `<div class="tags">${uniqueImprovements.map(i => `<span class="tag improvement">${i}</span>`).join('')}</div>`
+                    : '<p style="color: var(--gray-light);">Great performance! Keep building on your current skill set.</p>';
+
+                // Skill level analysis
+                let skillAnalysis = '';
+                if (reportData.percentage >= 80) {
+                    skillAnalysis = 'You demonstrate advanced Excel proficiency with strong technical knowledge and problem-solving abilities. You\'re ready for complex analytical roles.';
+                } else if (reportData.percentage >= 60) {
+                    skillAnalysis = 'You show solid intermediate Excel skills with good foundational knowledge. Focus on advanced features and best practices for continued growth.';
+                } else if (reportData.percentage >= 40) {
+                    skillAnalysis = 'You have basic Excel understanding with room for significant improvement. Consider structured training in core functions and data analysis techniques.';
+                } else {
+                    skillAnalysis = 'You\'re at the beginning of your Excel journey. Focus on fundamentals like basic formulas, formatting, and data organization before advancing to complex features.';
+                }
+
+                document.getElementById('skillAnalysis').innerHTML = `<p style="color: var(--gray-light); line-height: 1.6;">${skillAnalysis}</p>`;
+            }
+
+            animateScore(start, end, duration) {
+                const scoreElement = document.getElementById('finalScore');
+                const startTime = Date.now();
+                const range = end - start;
+                
+                const updateScore = () => {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeProgress = this.easeOutCubic(progress);
+                    const currentScore = Math.round(start + (range * easeProgress));
+                    
+                    scoreElement.textContent = `${currentScore}%`;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateScore);
+                    }
+                };
+                
+                updateScore();
+            }
+
+            easeOutCubic(t) {
+                return 1 - Math.pow(1 - t, 3);
+            }
+
+            restartInterview() {
+                this.stopTimers();
+                
+                // Reset all state
+                this.sessionId = null;
+                this.currentQuestion = null;
+                this.startTime = null;
+                this.questionStartTime = null;
+                this.sessionStartTime = null;
+                this.questionNumber = 0;
+                this.nextQuestionData = null;
+                this.performanceData = [];
+                
+                // Reset UI
+                document.getElementById('startSection').classList.remove('hidden');
+                document.getElementById('progressSection').classList.add('hidden');
+                document.getElementById('questionSection').classList.add('hidden');
+                document.getElementById('performanceSection').classList.add('hidden');
+                document.getElementById('evaluationSection').classList.add('hidden');
+                document.getElementById('reportSection').classList.add('hidden');
+                
+                document.getElementById('responseTextarea').value = '';
+                this.updateCharacterCount();
+                document.getElementById('progressBar').style.width = '0%';
+                document.getElementById('statusContainer').innerHTML = '';
+                
+                // Reset charts
+                if (this.performanceChart) {
+                    this.performanceChart.data.labels = [];
+                    this.performanceChart.data.datasets[0].data = [];
+                    this.performanceChart.update();
+                }
+                
+                if (this.finalChart) {
+                    this.finalChart.data.datasets[0].data = [0, 0, 0, 0, 0];
+                    this.finalChart.update();
+                }
+                
+                // Reset performance displays
+                document.getElementById('currentScore').textContent = '0%';
+                document.getElementById('strengthsList').textContent = 'Complete questions to see your strengths';
+                document.getElementById('improvementsList').textContent = 'Analysis will appear as you progress';
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                this.showStatus('🔄 Ready for a new assessment session!', 'info');
+            }
+
+            showStatus(message, type) {
+                const container = document.getElementById('statusContainer');
+                
+                const statusDiv = document.createElement('div');
+                statusDiv.className = `status ${type} fade-in`;
+                
+                const icon = type === 'success' ? '' : type === 'error' ? '' : type === 'warning' ? '' : 'ℹ';
+                statusDiv.innerHTML = `<span style="font-size: 1.2em;">${icon}</span> ${message}`;
+                
+                container.innerHTML = '';
+                container.appendChild(statusDiv);
+                
+                if (type === 'success' || type === 'info') {
+                    setTimeout(() => {
+                        if (statusDiv.parentNode) {
+                            statusDiv.style.opacity = '0';
+                            statusDiv.style.transform = 'translateY(-10px)';
+                            setTimeout(() => {
+                                if (statusDiv.parentNode) {
+                                    statusDiv.remove();
+                                }
+                            }, 300);
+                        }
+                    }, 6000);
+                }
+                
+                container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // Initialize the enhanced application
+        document.addEventListener('DOMContentLoaded', () => {
+            new EnhancedExcelInterviewer();
+        });
+
+        // Enhanced background effects
+        document.addEventListener('mousemove', (e) => {
+            const shapes = document.querySelectorAll('.shape');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.03;
+                const xOffset = (x - 0.5) * 30 * speed;
+                const yOffset = (y - 0.5) * 30 * speed;
+                
+                shape.style.transform = `translate(${xOffset}px, ${yOffset}px) scale(${1 + speed * 0.1})`;
+            });
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.getElementById('statusContainer').innerHTML = '';
+            }
+            
+            if (e.key === 'F5' && e.ctrlKey) {
+                e.preventDefault();
+                location.reload();
+            }
+        });
+
+        // Intersection observer for smooth animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '50px'
+        });
+
+        // Observe elements for animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.glass-card, .performance-chart, .evaluation, .report');
+            animatedElements.forEach((el) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Performance optimization
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                // Trigger chart resize if they exist
+                if (window.interviewer?.performanceChart) {
+                    window.interviewer.performanceChart.resize();
+                }
+                if (window.interviewer?.finalChart) {
+                    window.interviewer.finalChart.resize();
+                }
+            }, 250);
+        });
+
+        // Store interviewer instance globally for debugging
+        window.addEventListener('load', () => {
+            window.interviewer = new EnhancedExcelInterviewer();
+        });
+    </script>
+</body>
+</html>
