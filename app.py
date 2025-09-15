@@ -24,7 +24,7 @@ except ImportError:
 app = Flask(__name__)
 
 # Configure CORS
-CORS(app, origins=['http://localhost:5000', 'http://127.0.0.1:5000', 'http://localhost:3000'])
+CORS(app, origins=["*"])
 
 # Configure logging
 os.makedirs('logs', exist_ok=True)
@@ -484,7 +484,7 @@ def health_check():
 def index():
     return render_template('index.html', 
                          title="Excel Mock Interviewer",
-                         api_url="http://localhost:5000")
+                         api_url="/")
 
 if __name__ == '__main__':
     host = os.getenv('HOST', '0.0.0.0')
